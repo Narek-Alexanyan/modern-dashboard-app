@@ -1,6 +1,8 @@
 {
   "users": [
     {
+      "email": "test@gmail.com",
+      "password": "$2a$10$rVy2vjQimV8RjdkUsjEmmu1ZjPsEdLhHIMxPT9IAe2iD2h/QDdCWy",
       "id": 1
     }
   ]
