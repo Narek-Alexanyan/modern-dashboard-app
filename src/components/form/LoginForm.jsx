@@ -35,6 +35,7 @@ const LoginForm = ({ className }) => {
       const result = await dispatch(signIn(values)).unwrap();
 
       setUserValue({ ...result.user, token: result.accessToken });
+
       onSubmitProps.resetForm();
       navigate("/dashboard");
     } catch (error) {

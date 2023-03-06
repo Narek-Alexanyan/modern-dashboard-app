@@ -1,9 +1,9 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { axiosInstance } from "../../API/axiosInstance";
 
 const initialState = {
-  user: null,
-  token: null,
+  user: JSON.parse(localStorage.getItem("user")),
+  token: JSON.parse(localStorage.getItem("user"))?.token,
   status: "",
   error: null,
 };
@@ -12,7 +12,7 @@ export const signIn = createAsyncThunk(
   'counter/signIn',
   async (formData, { rejectWithValue, dispatch }) => {
     try {
-      const result = await axios.post("http://localhost:8080/login", formData)
+      const result = await axiosInstance.post("/login", formData)
 
       dispatch(setUser(result.data))
       return result.data
@@ -33,6 +33,7 @@ export const authSlice = createSlice({
     logout: (state) => {
       state.user = null
       state.token = null
+      localStorage.removeItem("user")
     }
   },
   extraReducers: (builder) => {
@@ -50,6 +51,6 @@ export const authSlice = createSlice({
   }
 })
 
-export const { setUser } = authSlice.actions;
+export const { setUser, logout } = authSlice.actions;
 
 export default authSlice.reducer;

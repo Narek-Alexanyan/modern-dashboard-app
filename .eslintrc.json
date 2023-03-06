@@ -12,6 +12,7 @@
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "off",
-    "react/no-unknown-property": ["error", { "ignore": ["element"] }]
+    "react/no-unknown-property": ["error", { "ignore": ["element"] }],
+    "react/display-name": "off"
   }
 }

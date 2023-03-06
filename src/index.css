@@ -46,11 +46,17 @@
   .typography--variant-subheading2 {
     @apply text-sm font-medium text-default-black dark:text-light;
   }
+  .typography--variant-subheading3 {
+    @apply text-sm font-normal text-default-black dark:text-light;
+  }
   .typography--variant-body1 {
     @apply text-base text-secondary-text dark:text-secondary-text-dark;
   }
   .typography--variant-body2 {
     @apply text-sm text-secondary-text dark:text-secondary-text-dark;
+  }
+  .typography--variant-body3 {
+    @apply text-xs text-secondary-text dark:text-secondary-text-dark;
   }
   .typography--color-primary {
     @apply text-primary;
@@ -62,4 +68,47 @@
     @apply w-4 h-4 rounded mr-2 border border-default-border-color dark:border-default-border-color-dark appearance-none outline-none cursor-pointer relative checked:bg-primary;
     @apply checked:before:content-['\2714'] checked:before:text-xs checked:before:text-default-white checked:before:absolute checked:before:right-[2px] checked:before:top-0;
   }
+  .popup-shadow {
+    box-shadow: 0px 40px 50px 1px rgba(120, 114, 114, 0.15);
+  }
+}
+
+/* css transition styles  */
+/* popup  */
+.popup-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.popup-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.popup-exit {
+  opacity: 1;
+}
+.popup-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* custom pretty scrollbar */
+.pretty-scrollbar::-webkit-scrollbar {
+  width: 20px;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }

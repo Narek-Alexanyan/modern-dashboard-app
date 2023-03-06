@@ -1,9 +1,57 @@
 {
   "users": [
     {
+      "firstName": "Narek",
+      "lastName": "Aleksanyan",
+      "position": "Software Developer",
       "email": "test@gmail.com",
       "password": "$2a$10$rVy2vjQimV8RjdkUsjEmmu1ZjPsEdLhHIMxPT9IAe2iD2h/QDdCWy",
       "id": 1
     }
-  ]
+  ],
+  "notifications": {
+    "userId": 1,
+    "result": [
+      {
+        "id": 1,
+        "title": "Payment Success",
+        "description": "Your success an order payment from star sun apartment in the amount of $320",
+        "type": "payment",
+        "status": "success",
+        "createdAt": 1678085870760
+      },
+      {
+        "id": 2,
+        "title": "Update Apps",
+        "description": "The Apps application has made updates to improve services.",
+        "type": "app-update",
+        "status": "waiting",
+        "createdAt": 1678085977954
+      },
+      {
+        "id": 3,
+        "title": "Booking Success",
+        "description": "You completed the order from star sun hotel and Apartment.",
+        "type": "booking",
+        "status": "success",
+        "createdAt": 1678086065766
+      },
+      {
+        "id": 4,
+        "title": "Payment Failed ",
+        "description": "Unfortunately, the payment for this from star sun apartment in the amount of $500 has failed.",
+        "type": "payment",
+        "status": "failed",
+        "createdAt": 1678086529202
+      },
+      {
+        "id": 5,
+        "title": "Booking Failed",
+        "description": "Unfortunately, the order from star sun hotel and Apartment has failed.",
+        "type": "booking",
+        "status": "failed",
+        "createdAt": 1678086614082
+      }
+    ]
+  }
 }

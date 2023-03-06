@@ -14,7 +14,13 @@ export default function Switcher({ className }) {
 
   return (
     <div className={className}>
-      <DarkModeSwitch checked={darkMode} onChange={toggleDarkMode} size={24} />
+      <DarkModeSwitch
+        size={18}
+        checked={darkMode}
+        onChange={toggleDarkMode}
+        sunColor='#808191'
+        moonColor='#FCFCFC'
+      />
     </div>
   );
 }

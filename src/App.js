@@ -1,20 +1,24 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import LoginPage from "./pages/auth/LoginPage";
 import HomePage from "./pages/home/HomePage"
-import './App.css';
 import ProtectedRoute from './components/hoc/ProtectedRoute';
+import Navbar from './components/navigation/Navbar';
 
 function App() {
+  let location = useLocation();
   return (
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/dashboard" element={
-        <ProtectedRoute>
-          <HomePage />
-        </ProtectedRoute>
-      } />
-    </Routes>
+    <>
+      {location.pathname !== "/" && <Navbar />}
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        } />
+      </Routes>
+    </>
   );
 }
 
