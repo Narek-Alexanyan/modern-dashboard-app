@@ -34,7 +34,10 @@ module.exports = {
         "default-border-color": "#E4E4E4",
         "default-border-color-dark": "#272B30",
         "bg-color-dark": "#111315"
-      }
+      },
+      transitionProperty: {
+        'width': 'width'
+      },
     },
   },
   plugins: [],

@@ -1,7 +1,7 @@
 import React from "react";
 
 const HomePage = () => {
-  return <div className='bg-app-bg-light min-h-screen'>HomePage</div>;
+  return <div className='main-pages-wrapper'>HomePage</div>;
 };
 
 export default HomePage;

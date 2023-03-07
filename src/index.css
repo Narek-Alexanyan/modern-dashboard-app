@@ -71,6 +71,9 @@
   .popup-shadow {
     box-shadow: 0px 40px 50px 1px rgba(120, 114, 114, 0.15);
   }
+  .main-pages-wrapper {
+    @apply bg-app-bg-light min-h-[calc(100vh-74px)] w-full;
+  }
 }
 
 /* css transition styles  */
