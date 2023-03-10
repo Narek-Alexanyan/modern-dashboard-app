@@ -10,6 +10,7 @@ import SwitchIcon from "../UI/icons/SwitchIcon";
 import PopupWrapper from "../UI/modals/PopupWrapper";
 import { logout } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import Avatar from "../UI/avatar/Avatar";
 
 const UserAction = memo(() => {
   const dispatch = useDispatch();
@@ -65,11 +66,8 @@ const UserAction = memo(() => {
 
   return (
     <div ref={infoRef} className='relative flex items-center'>
-      <div
-        onClick={() => setIsPopup((prev) => !prev)}
-        className='w-10 h-10 rounded-full bg-secondary-text text-2xl text-default-white dark:text-default-black uppercase flex items-center justify-center cursor-pointer'
-      >
-        {userInfo?.firstName.slice(0, 1)}
+      <div onClick={() => setIsPopup((prev) => !prev)}>
+        <Avatar name={userInfo?.firstName} />
       </div>
       <div className='ml-2 md:hidden'>
         <h2 className='typography--variant-subheading2'>

@@ -40,6 +40,9 @@
   .typography--variant-h6 {
     @apply text-xl font-medium text-default-black dark:text-light;
   }
+  .typography--variant-h6-2 {
+    @apply text-3xl font-bold text-default-black dark:text-light;
+  }
   .typography--variant-subheading1 {
     @apply text-base font-medium text-default-black dark:text-light;
   }
@@ -72,7 +75,7 @@
     box-shadow: 0px 40px 50px 1px rgba(120, 114, 114, 0.15);
   }
   .main-pages-wrapper {
-    @apply bg-app-bg-light min-h-[calc(100vh-74px)] w-full;
+    @apply bg-app-bg-light dark:bg-bg-color-dark min-h-[calc(100vh-74px)] w-full px-6 py-7 overflow-x-auto;
   }
 }
 

@@ -64,7 +64,7 @@ const Sidebar = () => {
 
   return (
     <div className={`transition-width ease-linear ${isSidebar ? "w-[250px]" : "w-0 opacity-0"}`}>
-      <div className='w-full h-full bg-default-white dark:bg-app-bg-dark py-6 px-4'>
+      <div className='w-[250px] h-full bg-default-white dark:bg-app-bg-dark py-6 px-4'>
         <div className='flex flex-col'>
           {sidebarList.map((item) => (
             <NavLink key={item.id} to={item.link}>

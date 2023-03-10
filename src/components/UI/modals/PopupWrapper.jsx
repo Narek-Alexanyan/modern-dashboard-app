@@ -8,7 +8,7 @@ const PopupWrapper = memo(({ children, isOpen, className }) => {
     <CSSTransition in={isOpen} nodeRef={nodeRef} timeout={300} classNames='popup' unmountOnExit>
       <div
         ref={nodeRef}
-        className={`absolute bg-default-white dark:bg-default-black flex flex-col gap-3 popup-shadow rounded-lg p-5 max-h-96 overflow-x-auto pretty-scrollbar
+        className={`absolute z-10 bg-default-white dark:bg-default-black flex flex-col gap-3 popup-shadow rounded-lg p-5 max-h-96 overflow-x-auto pretty-scrollbar
          ${className}`}
       >
         {children}

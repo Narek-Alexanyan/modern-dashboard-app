@@ -33,7 +33,8 @@ module.exports = {
         "default-white": "#FCFCFC",
         "default-border-color": "#E4E4E4",
         "default-border-color-dark": "#272B30",
-        "bg-color-dark": "#111315"
+        "bg-color-dark": "#111315",
+        "light-gray": "#E4E8EF"
       },
       transitionProperty: {
         'width': 'width'
